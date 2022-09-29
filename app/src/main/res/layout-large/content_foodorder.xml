@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.arindo.nura.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/wtoolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <ImageView
+                android:id="@+id/ictitle"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_sembako"/>
+
+            <TextView
+                android:id="@+id/txttitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18dp"
+                android:text="Product Title"/>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginTop="55dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <fragment
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.arindo.nura.RequestActivity2"/>
+
+        <!--ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/marker_destination"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tori"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/EditTextHint">
+                    <EditText
+                        android:id="@+id/txtdest"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:hint="Tujuan"
+                        android:text="Pilih tujuan"
+                        android:inputType="textEmailAddress"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_home"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/destdetail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/EditTextHint">
+                    <EditText
+                        android:id="@+id/tdestdetail"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:hint="Detail lokasi"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="50"/>
+                        <!--android:text="Input departure detail address"-->
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_phone_grey"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/destcontact"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/EditTextHint">
+                    <EditText
+                        android:id="@+id/tdestcontact"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:hint="Kontak tambahan (optional)"
+                        android:inputType="phone"
+                        android:maxLength="20"/>
+                        <!--android:text="Input if the sender is others"-->
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <SlidingDrawer
+            android:layout_marginTop="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:id="@+id/SlidingDrawer"
+            android:handle="@+id/layoutprice"
+            android:content="@+id/contentLayout"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:background="@android:color/transparent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/layoutprice"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/slideHandleText"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:background="@drawable/borderheader"
+                    android:drawableRight="@android:drawable/arrow_up_float"
+                    android:text="KERANJANG BELANJA"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contentLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center|top"
+                android:padding="5dip"
+                android:background="@color/grey_100">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.arindo.nura.NonScrollListView
+                            android:id="@+id/lv_nonscroll_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:divider="@android:color/transparent"
+                            android:dividerHeight="0dp"
+                            android:listSelector="@android:color/transparent">
+                        </com.arindo.nura.NonScrollListView>
+
+                        <Button
+                            android:text="TAMBAH MENU"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/addmenu"
+                            android:textColor="@color/white"/>
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="@color/grey_50">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/grey_700"
+                                    android:text="DETAIL PEMBAYARAN"
+                                    android:background="@drawable/border_bottom"/>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/grey_700"
+                                        android:textSize="16dp"
+                                        android:text="Estimasi Harga"/>
+
+                                    <TextView
+                                        android:id="@+id/tpricepayment"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/grey_700"
+                                        android:layout_alignParentRight="true"
+                                        android:textSize="16dp"
+                                        android:text="0"/>
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tdistance"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/grey_700"
+                                        android:textSize="16dp"
+                                        android:text="Biaya Pengiriman"/>
+
+                                    <TextView
+                                        android:id="@+id/texppayment"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/grey_700"
+                                        android:layout_alignParentRight="true"
+                                        android:textSize="16dp"
+                                        android:text="0"/>
+                                </RelativeLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="10dp"
+                                    android:background="@drawable/border_bottom"/>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/grey_700"
+                                        android:textSize="16dp"
+                                        android:text="TOTAL"/>
+
+                                    <TextView
+                                        android:id="@+id/tpayment"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/grey_700"
+                                        android:layout_alignParentRight="true"
+                                        android:textSize="16dp"
+                                        android:text="0"/>
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <LinearLayout
+                            android:id="@+id/layoutsubmit"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:layout_marginTop="10dp"
+                            android:visibility="visible"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:visibility="visible"
+                                android:text="PESAN"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/btnOrder"
+                                android:enabled="false"
+                                android:textColor="@color/white"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="vertical">
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </SlidingDrawer>
+
+        <ProgressBar
+            android:id="@+id/pbar"
+            android:visibility="gone"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true" />
+
+
+        <!--/ScrollView-->
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

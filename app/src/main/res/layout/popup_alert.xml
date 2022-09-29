@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/colorWhite" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/AppTheme.PopupOverlay"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+        <TextView android:textSize="18.0dip" android:textStyle="bold" android:id="@+id/titledata" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ImageView android:layout_width="fill_parent" android:layout_height="@dimen/shadowheight" android:src="@drawable/shadow" android:scaleType="fitXY" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dividers">
+            <TextView android:textSize="18.0dip" android:textColorHint="@color/colorHint" android:id="@+id/textMsg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dividers" android:ems="10" />
+            <LinearLayout android:layout_gravity="right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dividers">
+                <Button android:id="@+id/btnClose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="No" style="@style/Base.TextAppearance.AppCompat.Widget.Button" />
+                <Button android:id="@+id/btnDone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Yes" style="@style/Base.TextAppearance.AppCompat.Widget.Button" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

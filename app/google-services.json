@@ -1,0 +1,122 @@
+{
+  "project_info": {
+    "project_number": "902934597828",
+    "firebase_url": "https://payconnect-ed50a.firebaseio.com",
+    "project_id": "payconnect-ed50a",
+    "storage_bucket": "payconnect-ed50a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:902934597828:android:8dc4d544f37a64721a7991",
+        "android_client_info": {
+          "package_name": "com.arindo.nura"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "902934597828-v6um6naivk2um6ekgg7k8o3t26ree1ng.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.arindo.nura",
+            "certificate_hash": "fbdbe9e109964970f648d4be991a8db065f639bc"
+          }
+        },
+        {
+          "client_id": "902934597828-cjqh98an3890pu523vtl095qe57f725f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDofK7v-i1S4dgz4qqqMmYgc-VVJEmtJRo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "902934597828-cjqh98an3890pu523vtl095qe57f725f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:902934597828:android:75e102cf22c6bbd1",
+        "android_client_info": {
+          "package_name": "com.arindo.payconnect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "902934597828-b9iult2bomo2c1dtm1rg0i34qbq8tr43.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.arindo.payconnect",
+            "certificate_hash": "fbdbe9e109964970f648d4be991a8db065f639bc"
+          }
+        },
+        {
+          "client_id": "902934597828-cjqh98an3890pu523vtl095qe57f725f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDofK7v-i1S4dgz4qqqMmYgc-VVJEmtJRo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "902934597828-cjqh98an3890pu523vtl095qe57f725f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:902934597828:android:230ae2779ce62e22",
+        "android_client_info": {
+          "package_name": "com.arindo.payconnectapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "902934597828-oj8ffkahl0n1cgo8k47j12m2dqonfosg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.arindo.payconnectapp",
+            "certificate_hash": "fbdbe9e109964970f648d4be991a8db065f639bc"
+          }
+        },
+        {
+          "client_id": "902934597828-cjqh98an3890pu523vtl095qe57f725f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDofK7v-i1S4dgz4qqqMmYgc-VVJEmtJRo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "902934597828-cjqh98an3890pu523vtl095qe57f725f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

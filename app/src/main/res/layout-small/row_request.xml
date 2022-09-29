@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:id="@id/rowRequest" android:background="@drawable/borderheaderwhite" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:id="@+id/ttiket" android:gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <TextView android:id="@+id/tket" android:gravity="left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <TextView android:id="@+id/tstatus" android:gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+</TableRow>

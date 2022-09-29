@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.arindo.nura.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/wtoolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <ImageView
+                android:id="@+id/ictitle"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_dekstop_ride"/>
+
+            <TextView
+                android:id="@+id/txttitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/grey_800"
+                android:textSize="18dp"
+                android:text="Product Title"/>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginTop="55dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <fragment
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.arindo.nura.RequestActivity2"/>
+
+        <!--ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/marker_origin"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tori"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/EditTextHint">
+                    <EditText
+                        android:id="@+id/txtori"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:hint="Departure"
+                        android:textSize="16dp"
+                        android:text="Pick-up location"
+                        android:inputType="textEmailAddress"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_home"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/oridetail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/EditTextHint">
+                    <EditText
+                        android:id="@+id/toridetail"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:hint="Detail location"
+                        android:textSize="16dp"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="50"/>
+                        <!--android:text="Input departure detail address"-->
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_phone_grey"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/oricontact"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/EditTextHint">
+                    <EditText
+                        android:id="@+id/toricontact"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:hint="Additional contact (optional)"
+                        android:textSize="16dp"
+                        android:inputType="phone"
+                        android:maxLength="20"/>
+                        <!--android:text="Input if the sender is others"-->
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <SlidingDrawer
+            android:layout_marginTop="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:id="@+id/SlidingDrawer"
+            android:handle="@+id/layoutprice"
+            android:content="@+id/contentLayout"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:background="@android:color/transparent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/layoutprice"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TableLayout android:orientation="horizontal" android:id="@+id/tblPrice" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="0.0dip" android:layout_marginRight="0.0dip">
+                    <TableRow android:orientation="horizontal" android:id="@+id/rowPrice" android:background="@drawable/borderheader" android:layout_width="fill_parent" android:layout_height="wrap_content" >
+                        <TextView android:id="@+id/tdistance" android:gravity="left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Distance" android:layout_weight="1.0" />
+                        <TextView android:id="@+id/tprice" android:gravity="right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Price" android:layout_weight="1.0" />
+                    </TableRow>
+                </TableLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/slideHandleText"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:background="@drawable/borderheader"
+                    android:drawableRight="@android:drawable/arrow_up_float"
+                    android:text="Details of delivery and destination"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contentLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center|top"
+                android:padding="5dip"
+                android:background="@color/grey_100">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="@color/grey_50">
+                            <TableLayout
+                                android:id="@+id/tableDestination"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                            </TableLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <Button
+                                android:text="ADD DESTINATION"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:id="@+id/addDest"
+                                android:textColor="@color/white"/>
+                        </RelativeLayout>
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="@color/grey_50">
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/grey_700"
+                                    android:text="DETAIL ITEMS"/>
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:id="@+id/detailitem"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:theme="@style/EditTextHint">
+                                    <EditText
+                                        android:id="@+id/tdetailitem"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/black"
+                                        android:hint="Input details items of goods"
+                                        android:inputType="textMultiLine"
+                                        android:maxLength="255"
+                                        android:width="50dp"
+                                        android:lines="4"
+                                        android:minLines="4"
+                                        android:maxLines="4"
+                                        android:scrollbars="vertical"
+                                        android:gravity="top|left"/>
+                                </android.support.design.widget.TextInputLayout>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="@color/grey_50">
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/grey_700"
+                                    android:text="LOADING SERVICE"/>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/white"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="horizontal">
+                                    <CheckBox
+                                        android:id="@+id/cbLoadService"
+                                        android:layout_alignParentRight="@+id/layoutNumPicker"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/grey_700"
+                                        android:layout_marginRight="10dp"
+                                        android:text="1 Additional Shipper"
+                                        android:theme="@style/EditTextHint"/>
+
+                                    <LinearLayout
+                                        android:id="@+id/layoutNumPicker"
+                                        android:layout_width="100dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_marginRight="5dp"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/tnumpickernegative"
+                                            android:layout_width="50dp"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/colorPrimary"
+                                            android:gravity="center_horizontal"
+                                            android:textSize="18dp"
+                                            android:text=" - "
+                                            android:background="@drawable/border_nav_left"/>
+
+                                        <TextView
+                                            android:id="@+id/tnumpickerpositive"
+                                            android:layout_width="50dp"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/colorPrimary"
+                                            android:gravity="center_horizontal"
+                                            android:textSize="18dp"
+                                            android:text=" + "
+                                            android:background="@drawable/border_nav_right"/>
+                                    </LinearLayout>
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:id="@+id/tloadservice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/grey_700"
+                                    android:layout_marginLeft="35dp"
+                                    android:text="The driver only help raise and lower the goods, if you need more help please check for additional assistants."/>
+
+                                <TextView
+                                    android:id="@+id/tshipperprice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/grey_700"
+                                    android:layout_marginLeft="35dp"
+                                    android:textStyle="bold"
+                                    android:text=""/>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="@color/grey_50">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+                                <CheckBox
+                                    android:id="@+id/cbTermsCondition"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/grey_700"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_alignParentRight="@+id/imgTermsCondition"
+                                    android:text="I agree tor the terms and conditions"
+                                    android:theme="@style/EditTextHint"/>
+
+                                <ImageView
+                                    android:id="@+id/imgTermsCondition"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@drawable/ic_about"/>
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <LinearLayout
+                            android:id="@+id/layoutsubmit"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:layout_marginTop="10dp"
+                            android:visibility="visible"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:text="ORDER"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/btnOrder"
+                                android:enabled="false"
+                                android:textColor="@color/white"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="vertical">
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </SlidingDrawer>
+
+        <ProgressBar
+            android:id="@+id/pbar"
+            android:visibility="gone"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true" />
+
+
+        <!--/ScrollView-->
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

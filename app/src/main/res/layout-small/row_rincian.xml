@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:id="@+id/rowRincian" android:background="@drawable/borderheaderwhite" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:id="@+id/titem" android:gravity="left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Material" android:layout_weight="1.0" />
+    <TextView android:id="@+id/tharga" android:gravity="right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Harga" android:layout_weight="1.0" />
+    <TextView android:id="@+id/tjml" android:gravity="right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Jml" android:layout_weight="1.0" />
+    <TextView android:id="@+id/tsatuan" android:gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="St" android:layout_weight="1.0" />
+    <TextView android:id="@+id/ttotal" android:gravity="right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Total" android:layout_weight="1.0" />
+</TableRow>

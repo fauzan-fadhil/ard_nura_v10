@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Spinner android:id="@+id/spinRequest" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ProgressBar android:id="@+id/progress" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="30.0dip" android:layout_centerVertical="true" android:layout_below="@id/spinRequest" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableLayout android:orientation="horizontal" android:id="@+id/tableRequest" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="0.0dip" android:layout_marginRight="0.0dip">
+            <TableRow android:orientation="horizontal" android:id="@+id/rowRequest" android:background="@drawable/borderheader" android:layout_width="fill_parent" android:layout_height="wrap_content" >
+                <TextView android:gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Tiket" android:layout_weight="1.0" />
+                <TextView android:gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Keterangan" android:layout_weight="1.0" />
+                <TextView android:gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Status" android:layout_weight="1.0" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</RelativeLayout>

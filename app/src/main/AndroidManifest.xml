@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.arindo.nura" >
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="ANDROID.PERMISSION.MANAGE_DOCUMENTS"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <permission
+        android:name="com.arindo.nura.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.arindo.payconnect.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+
+    <application
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:requestLegacyExternalStorage="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.arindo.nura.Splash"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.arindo.nura.LoginActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="com.arindo.nura.Registration" android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.arindo.nura.MainActivity" android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.arindo.nura.RequestList" />
+        <activity android:name="com.arindo.nura.ZoomImage" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="com.arindo.nura.RequestDetail" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="com.arindo.nura.Account" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="com.arindo.nura.Setting" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="com.arindo.nura.Information" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="com.arindo.nura.RequestActivity2" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="com.arindo.nura.History" android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.arindo.nura.HistoryDetail" android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.arindo.nura.SendOption" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="com.arindo.nura.SendOrder" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="com.arindo.nura.HistoryDetailSend" android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.arindo.nura.FoodOption" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="com.arindo.nura.FoodRestoList" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="com.arindo.nura.FoodRestoDetail" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name="com.arindo.nura.FoodRestoMenu"
+            android:screenOrientation="fullSensor"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="com.arindo.nura.FoodOrder" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="com.arindo.nura.FoodOrderNonKurir" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="com.arindo.nura.HistoryDetailFood" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="com.arindo.nura.CleanOrder" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="com.arindo.nura.HistoryDetailClean" android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name="com.arindo.nura.FoodSearch" android:theme="@style/AppTheme.NoActionBar"/>
+
+        <service
+            android:name="com.arindo.nura.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <service android:name="com.arindo.nura.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAS2JfClIY-X5ZaILitjzAXVc1qi-MDLRA"/>
+            <!--android:value="AIzaSyDEtf-qlFzXoDSfDVjPTDtMJLG64erLM4k"/-->
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false"/>
+        <!--receiver android:name=".MyBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_INSTALL"/>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.PACKAGE_CHANGED"/>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+                <data android:scheme="package"  />
+            </intent-filter>
+        </receiver-->
+
+    </application>
+</manifest>

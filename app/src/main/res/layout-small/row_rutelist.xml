@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border_bottom"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/truteid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:textColor="@color/grey_800" />
+
+    <TextView
+        android:id="@+id/trute"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/grey_800" />
+
+    <TextView
+        android:id="@+id/truteaddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="30dp"
+        android:textColor="@color/grey_800" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/trutelat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey_800" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/trutelng"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey_800" />
+
+</LinearLayout>

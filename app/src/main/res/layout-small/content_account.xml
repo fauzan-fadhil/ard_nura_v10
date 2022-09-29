@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.arindo.nura.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/wtoolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginTop="55dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:padding="10.0dip"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layoutAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:paddingTop="10.0dip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/layout_nama"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:theme="@style/EditTextHint">
+                            <EditText
+                                android:id="@+id/tnama"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:hint="Nama"
+                                android:text="Arindo"
+                                android:inputType="textEmailAddress"
+                                android:maxLength="30"/>
+                        </android.support.design.widget.TextInputLayout>
+
+                        <ImageView
+                            android:id="@+id/imgnama"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10.0dip"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_edit"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:paddingTop="10.0dip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/layout_alamat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:theme="@style/EditTextHint">
+                            <EditText
+                                android:id="@+id/talamat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:hint="Alamat"
+                                android:text=""
+                                android:inputType="textEmailAddress"
+                                android:maxLength="65"/>
+                        </android.support.design.widget.TextInputLayout>
+
+                        <ImageView
+                            android:id="@+id/imgalamat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10.0dip"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_edit"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:paddingTop="10.0dip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TableLayout
+                            android:paddingTop="10.0dip"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <android.support.design.widget.TextInputLayout
+                                    android:id="@+id/layout_phonecode"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:theme="@style/EditTextHint">
+                                    <EditText
+                                        android:id="@+id/tkdtelp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/black"
+                                        android:hint="Kode Area"
+                                        android:text=""
+                                        android:inputType="phone"
+                                        android:maxLength="5"/>
+                                </android.support.design.widget.TextInputLayout>
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:id="@+id/layout_phone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0"
+                                    android:theme="@style/EditTextHint">
+                                    <EditText
+                                        android:id="@+id/ttelp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/black"
+                                        android:hint="Telepon"
+                                        android:text=""
+                                        android:inputType="phone"
+                                        android:maxLength="15"/>
+                                </android.support.design.widget.TextInputLayout>
+                            </TableRow>
+                        </TableLayout>
+
+                        <ImageView
+                            android:id="@+id/imgtelp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10.0dip"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_edit"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:paddingTop="10.0dip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/layout_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:theme="@style/EditTextHint">
+                            <EditText
+                                android:id="@+id/temail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:hint="Email"
+                                android:text=""
+                                android:inputType="textEmailAddress"
+                                android:maxLength="255"/>
+                        </android.support.design.widget.TextInputLayout>
+
+                        <ImageView
+                            android:id="@+id/imgemail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10.0dip"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_edit"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutChangePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/layout_passexp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:theme="@style/EditTextHint">
+                        <EditText
+                            android:id="@+id/tpassexp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:hint="Sandi Lama"
+                            android:text=""
+                            android:inputType="textPassword"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/layout_passnew"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:theme="@style/EditTextHint">
+                        <EditText
+                            android:id="@+id/tpassnew"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:hint="Sandi Baru"
+                            android:text=""
+                            android:inputType="textPassword"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/layout_passconf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:theme="@style/EditTextHint">
+                        <EditText
+                            android:id="@+id/tpassconf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:hint="Konfirmasi Sandi Baru"
+                            android:text=""
+                            android:inputType="textPassword"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <Button
+                            android:text="Ubah Sandi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnChange"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

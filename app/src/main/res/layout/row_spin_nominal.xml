@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:id="@+id/rowSpinNominal" android:background="@drawable/borderheaderwhite" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:id="@+id/tnominal" android:textSize="18dp" android:gravity="left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+</TableRow>

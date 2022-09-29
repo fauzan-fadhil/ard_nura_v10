@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.arindo.nura.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/wtoolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <ImageView
+                android:id="@+id/ictitle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_sembako"/>
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/txttitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="10dp"
+                        android:text="Lokasi Anda "/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:id="@+id/txtLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:text="Location"/>
+                </TableRow>
+            </TableLayout>
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginTop="55dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_50"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ttitle"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey_700"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:text="I'M IN THE MOOD FOR..."/>
+            <!--android:text="Choose the food as you want."-->
+
+        <TextView
+            android:id="@+id/tsearchfood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:textColor="@color/grey_500"
+            android:textSize="14dp"
+            android:drawableRight="@android:drawable/ic_menu_search"
+            android:background="@drawable/edittext_selector"
+            android:gravity="center_vertical"
+            android:text="Search basic food.."/>
+
+        <RelativeLayout
+            android:id="@+id/LayoutGrid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true" />
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:visibility="visible"
+                android:id="@+id/swlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.arindo.nura.NonScrollListView
+                    android:id="@+id/list"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@android:color/transparent"
+                    android:layout_margin="5dp"
+                    android:dividerHeight="0dp"
+                    android:listSelector="@color/colorTransparent"/>
+
+                <GridView
+                    android:visibility="gone"
+                    android:id="@+id/gridView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:numColumns="2"
+                    android:horizontalSpacing="0dp"
+                    android:verticalSpacing="0dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp">
+                </GridView>
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/LayoutList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/progressbar1"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true" />
+
+            <ListView
+                android:id="@+id/list1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="10dp" />
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

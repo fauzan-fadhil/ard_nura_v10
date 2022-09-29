@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/colorWhite" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="300.0dip">
+            <ImageView android:layout_gravity="center" android:id="@+id/logo" android:layout_width="250dp" android:layout_height="150dp" android:src="@drawable/logo" />
+            <TextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textColor="@color/grey_800" android:text="@string/header_1"/>
+            <TextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textColor="@color/grey_800" android:text="Silahkan masuk dengan menggunakan email dan sandi yang telah teregistrasi pada Arindo Kurir, apabila belum terdaftar, silahkan pilih registrasi." />
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/loginbox"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <android.support.design.widget.TextInputLayout
+                    android:theme="@style/EditTextHintLogin"
+                    android:id="@+id/layout_email"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:textColor="@color/colorBlack"
+                        android:id="@+id/email"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email"
+                        android:singleLine="true"
+                        android:inputType="textEmailAddress" />
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:theme="@style/EditTextHintLogin"
+                    android:id="@+id/layout_password"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <EditText android:textColor="@color/colorBlack" android:id="@+id/password" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" android:hint="Sandi" android:singleLine="true" android:inputType="textPassword" />
+                </android.support.design.widget.TextInputLayout>
+                <CheckBox android:theme="@style/EditTextHintLogin" android:textColor="@color/grey_800" android:layout_gravity="right" android:id="@+id/showPassword" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tampilkan Sandi" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                    <Button android:id="@+id/btnLogin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="MASUK" android:textColor="@color/white" android:layout_weight="1.0" />
+                    <Button android:id="@+id/btnReg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="REGISTRASI" android:textColor="@color/white" android:layout_weight="1.0" />
+                </LinearLayout>
+                <TextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textColor="@color/grey_800" android:text="@string/footer_1"/>
+                <TextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textColor="@color/grey_800" android:text="@string/footer_2"/>
+                <TextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textColor="@color/grey_800" android:text="@string/footer_3"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Waserba NURa</string>
+    <string name="navigation_drawer_open">Buka Navigasi</string>
+    <string name="navigation_drawer_close">Keluar Navigasi</string>
+    <string name="action_account">Akun</string>
+    <string name="action_settings">Pengaturan</string>
+    <string name="action_logout">Keluar</string>
+    <string name="action_order">Pengambilan Pesanan</string>
+    <string name="header_1">Waserba NURa</string>
+    <string name="header_2">Version 1.0.0</string>
+    <string name="footer_1">&#169;2019 ARINDO.NET</string>
+    <string name="footer_2">All rights reserved.</string>
+    <string name="footer_3"></string>
+
+    <string name="str_atv_places">Pilih Lokasi</string>
+</resources>

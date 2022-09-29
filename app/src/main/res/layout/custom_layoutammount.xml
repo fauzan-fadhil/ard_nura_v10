@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_widget"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/bordersendoption"
+    android:layout_marginTop="0.0dip"
+    android:focusable="true" >
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_shopping_cart_black_24dp"
+        android:contentDescription="image"
+        android:scaleType="center" />
+
+    <com.arindo.nura.BadgeView
+        android:id="@+id/tcount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-10dip"
+        android:layout_toRightOf="@+id/icon">
+    </com.arindo.nura.BadgeView>
+
+    <LinearLayout
+        android:layout_marginLeft="5dip"
+        android:layout_toRightOf="@+id/tcount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_left2"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="Estimasi Harga :"
+            android:textColor="@color/grey_800"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:id="@+id/ttotal"
+            android:text="Rp 0"
+            android:textColor="@color/grey_700"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_left2"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/icnext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_arrowright"
+            android:contentDescription="image"
+            android:scaleType="center" />
+    </LinearLayout>
+
+</RelativeLayout>

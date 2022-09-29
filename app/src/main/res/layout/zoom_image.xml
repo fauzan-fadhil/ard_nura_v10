@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:fitsSystemWindows="true"
+	tools:context=".MainActivity">
+
+	<android.support.design.widget.AppBarLayout
+		android:id="@+id/wtoolbar"
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:theme="@style/AppTheme.AppBarOverlay">
+
+		<android.support.v7.widget.Toolbar
+			android:id="@+id/toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="?attr/actionBarSize"
+			android:background="?attr/colorPrimary"
+			app:popupTheme="@style/AppTheme.PopupOverlay">
+
+			<ImageView
+				android:id="@+id/actcamera"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/ic_menu_camera"
+				android:layout_gravity="end"
+				android:layout_marginLeft="5dp"
+				android:layout_marginRight="5dp"/>
+
+			<ImageView
+				android:id="@+id/actgallery"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/ic_menu_gallery"
+				android:layout_gravity="end"
+				android:layout_marginLeft="5dp"
+				android:layout_marginRight="5dp"/>
+		</android.support.v7.widget.Toolbar>
+
+	</android.support.design.widget.AppBarLayout>
+
+	<LinearLayout
+		android:layout_marginTop="55dp"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/white"
+		android:orientation="vertical"
+		android:gravity="center_vertical">
+		<FrameLayout
+			android:id="@+id/layoutimg"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+		</FrameLayout>
+	</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.arindo.nura.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/wtoolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <!--ImageView
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_gelis_blue"/-->
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginTop="55dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <!--Informasi Tentang Aplikasi-->
+
+        <LinearLayout
+            android:id="@+id/layoutAbout"
+            android:visibility="gone"
+            android:gravity="center_vertical"
+            android:background="@color/colorWhite"
+            android:orientation="vertical"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="-55dp">
+            <TextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textColor="@color/black" android:text="@string/header_1" android:textSize="18dp" android:textStyle="bold"/>
+            <TextView android:id="@+id/tversi" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textColor="@color/black" android:text="@string/header_2" />
+
+            <ImageView android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_gravity="center" android:id="@+id/logo" android:layout_width="200dp" android:layout_height="150dp" android:src="@drawable/logo" />
+
+            <TextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textColor="@color/black" android:text="@string/footer_1"/>
+            <TextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textColor="@color/black" android:text="@string/footer_2"/>
+            <TextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textColor="@color/black" android:text="@string/footer_3"/>
+
+            <Button android:id="@+id/btnAbout" android:layout_gravity="center" android:layout_marginTop="30dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Description" android:textColor="@color/black" />
+        </LinearLayout>
+
+        <!--Informasi Bantuan & Contact-->
+        <ScrollView
+            android:id="@+id/scInfo"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <LinearLayout
+                android:padding="10.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+                    <LinearLayout
+                        android:id="@+id/layoutHelp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/thelp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutContact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TableRow
+                                android:id="@+id/tRow1"
+                                android:background="@drawable/bg_textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="20dp"
+                                    android:src="@drawable/ic_phone"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="16dp"
+                                    android:text="Telepon"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="16dp"
+                                    android:text="  : "/>
+
+                                <TextView
+                                    android:id="@+id/ttelp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="16dp"
+                                    android:text="+000 00000000"/>
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/tRow2"
+                                android:background="@drawable/bg_textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="20dp"
+                                    android:src="@drawable/ic_fax"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="16dp"
+                                    android:text="Fax."/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="16dp"
+                                    android:text="  : "/>
+
+                                <TextView
+                                    android:id="@+id/tfax"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="16dp"
+                                    android:text="+000 00000000"/>
+                            </TableRow>
+                        </TableLayout>
+
+                        <LinearLayout
+                            android:paddingTop="10.0dip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="0dp"
+                                android:layout_gravity="end"
+                                android:src="@drawable/ic_mail"/>
+
+                            <EditText
+                                android:id="@+id/tpesan"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="16dp"
+                                android:hint="Masukan pesan anda .."
+                                android:theme="@style/EditTextHint"
+                                android:maxLength="100"
+                                android:width="50dp"
+                                android:lines="4"
+                                android:minLines="4"
+                                android:maxLines="4"
+                                android:scrollbars="vertical"
+                                android:gravity="top|left"
+                                android:layout_marginTop="-10dp"/>
+
+                            <Button
+                                android:id="@+id/btnSending"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:textSize="16dp"
+                                android:text="Kirim pesan anda"/>
+                        </LinearLayout>
+                    </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
